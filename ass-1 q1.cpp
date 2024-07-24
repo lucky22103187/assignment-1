@@ -1,30 +1,28 @@
-#include<iostream>
+#include <iostream>
+#include <vector>
 
-using namepsce std;
+using namespace std;
 
-void calculate_avg(int arr, int n)
-{
-    for(int i ;i<=n;i++)
-    {
-     int sum+=arr[i];
+int main() {
+    int n;
+    double sum = 0.0, average;
 
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    vector<int> numbers(n);
+    cout << "Enter " << n << " integers:\n";
+    for (int i = 0; i < n; ++i) {
+        cin >> numbers[i];
+        sum += numbers[i];
     }
-}
 
+    if (n > 0) {
+        average = sum / n;
+        cout << "Average = " << average << std::endl;
+    } else {
+        cout << "No elements to calculate average.\n";
+    }
 
-
-
-int main(){
-
-int n;
-cout<<"hello everyone ";
-cin>>n;
-
-for(int i=0; i<=n;i++)
-    {
-    int num+=arr[i]
-
-}
-
-
+    return 0;
 }
